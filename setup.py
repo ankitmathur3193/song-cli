@@ -10,7 +10,7 @@ def read(fname):
 
 setup(
 	name = 'song',
-	version = '0.0.0',
+	version = '1.0',
 	author = 'ankit mathur',
 	author_email = 'ankitmathur.dtu@gmail.com',
 	license = 'UNLICENSE',
