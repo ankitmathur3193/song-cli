@@ -11,7 +11,7 @@ with open(join(this_dir, 'README.rst'), encoding='utf-8') as file:
 
 setup(
 	name = 'song',
-	version = '1.0',
+	version = '1.2',
 	author = 'ankit mathur',
 	author_email = 'ankitmathur.dtu@gmail.com',
 	license = 'UNLICENSE',

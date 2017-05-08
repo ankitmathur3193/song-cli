@@ -18,4 +18,4 @@ class Download(Base):
         p=Parse(name)
        	download_url=p.get_download_url()
     	file_url=p.get_file_download_url(download_url)
-    	p.file_download(file_url)
+    	p.file_download_using_wget(file_url)

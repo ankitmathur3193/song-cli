@@ -1,6 +1,8 @@
 import requests
 from BeautifulSoup import BeautifulSoup
 import re
+import os
+from os.path import abspath, dirname, join
 class Parse:
 
 	def __init__(self,name):
@@ -69,7 +71,7 @@ class Parse:
 				raise requests.exceptions.RequestException			
 		except requests.exceptions.RequestException as e:
 				print e
-				quit()	
+				quit()		
 
 		total_size=float(r.headers['Content-Length'])/(1024*1024)
 		print 'Total size of file to be downloaded %.2f MB '%total_size
@@ -82,7 +84,16 @@ class Parse:
 					print '{0:.0%} Downloaded'.format(total_downloaded_size/total_size)
 					f.write(chunk)
 
-		print 'Downloaded file %s '%file_name			
+		print 'Downloaded file %s '%file_name		
+
+
+	def file_download_using_wget(self,url):
+		file_name=url.split('/')[-1]
+		print 'Downloading file %s '%file_name
+		command='wget -c --read-timeout=30 --tries=3 -q --show-progress --no-check-certificate '
+		url='"'+url+'"'
+		command=command+url
+		os.system(command)			
 
 
 	def get_file_download_url(self,url):
