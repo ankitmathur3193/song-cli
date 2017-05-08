@@ -7,7 +7,7 @@ class Parse:
 		self.name=name
 
 	def get_html_response(self,url):
-		print "Downloading page %s .."%url
+		#print "Downloading page %s .."%url
 		response=requests.get(url)
 		return response.content
 
@@ -36,12 +36,16 @@ class Parse:
 	def file_download(self,url):
 		file_name=url.split('/')[-1]
 		print 'Downloading file %s '%file_name
-
+		#print 'Downloading from %s'%url
 		r=requests.get(url,stream=True)
-
+		total_size=float(r.headers['Content-Length'])/(1024*1024)
+		total_downloaded_size=0.0
 		with open(file_name,'wb') as f:
 			for chunk in r.iter_content(chunk_size=1024*1024):
 				if chunk:
+					size_of_chunk=float(len(chunk))/(1024*1024)
+					total_downloaded_size+=size_of_chunk
+					print '{0:.0%} Downloaded'.format(total_downloaded_size/total_size)
 					f.write(chunk)
 
 		print 'Downloaded file %s '%file_name			
