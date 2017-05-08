@@ -11,15 +11,17 @@ class Parse:
 	def get_html_response(self,url):
 		print "Downloading page %s .."%url
 		try:
-			response=requests.get(url)
+			response=requests.get(url,timeout=50)
 		except requests.exceptions.SSLError:
 			try:
-				response=requests.get(url,verify=False)
+				response=requests.get(url,verify=False,timeout=50)
 			except requests.exceptions.RequestException as e:
-				raise requests.exceptions.RequestException
+				print e
+				quit()
 		except requests.exceptions.RequestException as e:
-			print e
-			quit()		
+			print e	
+			quit()	
+			
 		return response.content
 
 	def parse_google(self,html):
@@ -63,12 +65,13 @@ class Parse:
 		print 'Downloading file %s '%file_name
 		#print 'Downloading from %s'%url
 		try:
-			r=requests.get(url,stream=True)
+			r=requests.get(url,stream=True,timeout=50)
 		except requests.exceptions.SSLError:
 			try:
-				response=requests.get(url,stream=True,verify=False)
+				response=requests.get(url,stream=True,verify=False,timeout=50)
 			except requests.exceptions.RequestException as e:
-				raise requests.exceptions.RequestException			
+				print e
+				quit()		
 		except requests.exceptions.RequestException as e:
 				print e
 				quit()		
@@ -90,7 +93,7 @@ class Parse:
 	def file_download_using_wget(self,url):
 		file_name=url.split('/')[-1]
 		print 'Downloading file %s '%file_name
-		command='wget -c --read-timeout=30 --tries=3 -q --show-progress --no-check-certificate '
+		command='wget -c --read-timeout=50 --tries=3 -q --show-progress --no-check-certificate '
 		url='"'+url+'"'
 		command=command+url
 		os.system(command)			
