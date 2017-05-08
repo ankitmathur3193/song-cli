@@ -15,7 +15,7 @@ Examples:
  
 Help:
   For help using this tool, please open an issue on the Github repository:
-  https://github.com/rdegges/skele-cli
+  https://github.com/ankitmathur3193/song-cli
 """
 from inspect import getmembers, isclass
 
