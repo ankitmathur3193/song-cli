@@ -11,7 +11,7 @@ Options:
   --version                         Show version.
  
 Examples:
-  song download wo lamhe
+  song -d wo lamhe
  
 Help:
   For help using this tool, please open an issue on the Github repository:
