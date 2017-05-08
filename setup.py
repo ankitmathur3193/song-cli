@@ -4,8 +4,9 @@ from subprocess import call
 
 from setuptools import Command, find_packages, setup
 
-def read(fname):
-	return open(os.path.join(os.path.dirname(__file__),fname)).read()
+this_dir = abspath(dirname(__file__))
+with open(join(this_dir, 'README.rst'), encoding='utf-8') as file:
+    long_description = file.read()
 
 
 setup(
@@ -15,8 +16,8 @@ setup(
 	author_email = 'ankitmathur.dtu@gmail.com',
 	license = 'UNLICENSE',
 	description = ' A script to download hindi and punjabi songs from internet',
-	long_description = 'will include something',
-	url = '',
+	long_description = long_description,
+	url = 'https://github.com/ankitmathur3193/song-cli',
 	keywords = 'song download script',
 	packages = find_packages(exclude=['docs', 'tests*']),
 	install_requires = ['docopt','requests','BeautifulSoup'],

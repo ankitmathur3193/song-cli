@@ -1,0 +1,9 @@
+*.pyc
+
+/dist/
+
+/*.egg-info
+
+*.mp3
+
+/build/
