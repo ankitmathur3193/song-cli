@@ -3,7 +3,7 @@ from os.path import abspath, dirname, join
 from subprocess import call
 
 from setuptools import Command, find_packages, setup
-
+from song import __version__ as VERSION
 this_dir = abspath(dirname(__file__))
 with open(join(this_dir, 'README.rst'), encoding='utf-8') as file:
     long_description = file.read()
@@ -11,7 +11,7 @@ with open(join(this_dir, 'README.rst'), encoding='utf-8') as file:
 
 setup(
 	name = 'song',
-	version = '1.3',
+	version = VERSION,
 	author = 'ankit mathur',
 	author_email = 'ankitmathur.dtu@gmail.com',
 	license = 'UNLICENSE',
