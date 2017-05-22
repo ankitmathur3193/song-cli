@@ -25,7 +25,7 @@ from . import __version__ as VERSION
 
 def main():
     """Main CLI entrypoint."""
-    print VERSION
+    #print VERSION
     from commands.download import Download
     options = docopt(__doc__, version=VERSION)
     #print "You reached here"
