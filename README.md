@@ -1,5 +1,5 @@
 # SONG DOWNLOADER #
-A command Line interface to download Bollywood and punjabi songs from internet
+A command Line interface for downloading Bollywood and Punjabi Songs from Internet
 ## For Installing ##
 pip install song
 ## For Upgrading ##
