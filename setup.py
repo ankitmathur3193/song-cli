@@ -20,7 +20,7 @@ setup(
 	url = 'https://github.com/ankitmathur3193/song-cli',
 	keywords = 'song download script',
 	packages = find_packages(exclude=['docs', 'tests*']),
-	install_requires = ['docopt','requests','BeautifulSoup'],
+	install_requires = ['docopt','requests','BeautifulSoup','tqdm'],
 	classifiers = [
         'Intended Audience :: Developers',
         'Topic :: Utilities',

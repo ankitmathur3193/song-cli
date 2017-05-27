@@ -27,5 +27,5 @@ class Download(Base):
     	q = q.getParser("mr jatt")
     	download_url = q.Parse(website_url,name)
         file_download=FileDownload()
-    	file_download.file_download_using_wget(download_url)
+    	file_download.file_download_cross_platform(download_url)
 

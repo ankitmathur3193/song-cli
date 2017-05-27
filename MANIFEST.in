@@ -1,1 +1,3 @@
 include README.rst
+exclude *.mp3
+exclude .gitignore
