@@ -23,8 +23,8 @@ song -d [ song_name | artist_name | movie_name ]
     ![after movie name](https://cloud.githubusercontent.com/assets/15183662/26523019/b009e7b2-432a-11e7-8241-919f95c993bf.png)
   
  
- * ### For Listing Top songs of a artist ###
- 
+ * ### For Listing Top songs of a Artist ###
+
     song -d sunidhi chauhan
  
     ![artist_top_songs](https://cloud.githubusercontent.com/assets/15183662/26523023/c1a272dc-432a-11e7-85e7-1757a40da341.png)
