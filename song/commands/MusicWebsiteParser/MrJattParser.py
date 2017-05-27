@@ -23,7 +23,7 @@ class MrJattParser(MusicWebsiteParser):
 		for x in xrange(len(a_list)-1):
 			r=a_list[x]
 			p=str(r)
-			q=re.sub(r'<a.*/>|<span.*">|</span>|</a>','',p)
+			q=re.sub(r'<a.*/>|<span.*">|</span>|</a>|<a.*html">|<font.*">|</font>','',p)
 			print q
 
 
