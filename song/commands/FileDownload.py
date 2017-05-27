@@ -92,10 +92,10 @@ class FileDownload:
 		#command='wget -c --read-timeout=50 --tries=3 -q --show-progress --no-check-certificate '
 		try:
 			#raise Exception('I know Python!')
-			print 'file download using wget'
+			#print 'file download using wget'
 			subprocess.call(['wget','-c','--read-timeout=50','--tries=3','-q','--show-progress','--no-check-certificate',url])
 		except:
-			print 'file download using requests'
+			#print 'file download using requests'
 			self.file_download_using_requests(url);	
 
 
