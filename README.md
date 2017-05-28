@@ -2,6 +2,7 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ankitmathur3193/song-cli/blob/master/LICENSE)
 # SONG DOWNLOADER #
 A **command line** interface for **downloading Songs/mp3** from Internet
+
 Just type the **name of the song** and it will download for you
 
 ## Features ##
@@ -55,7 +56,7 @@ Optional arguments are:
     ![after movie name](https://cloud.githubusercontent.com/assets/15183662/26523019/b009e7b2-432a-11e7-8241-919f95c993bf.png)
   
  
- * ### For Listing Top songs of a Artist ###
+ * ### For Listing Top songs of an Artist ###
     ```
     song -d sunidhi chauhan     
     ```
@@ -63,7 +64,7 @@ Optional arguments are:
     ![artist_top_songs](https://cloud.githubusercontent.com/assets/15183662/26523023/c1a272dc-432a-11e7-85e7-1757a40da341.png)
  
 ## TODO ##
-- [ X ] Add support for Hollywood/English Songs
+- [X] Add support for Hollywood/English Songs
 - [ ] Implement Unit Testing
 - [ ] Option for downloading all songs of a movie
 - [ ] Option for downloading all top songs of a artist
