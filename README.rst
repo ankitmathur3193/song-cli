@@ -1,6 +1,12 @@
-|PyPI version| |license| # SONG DOWNLOADER # A **command line**
-interface for **downloading Bollywood and Punjabi Songs** from Internet
-## For Installing ##
+|PyPI version| |license|
+
+SONG DOWNLOADER
+===============
+
+A **command line** interface for **downloading Bollywood and Punjabi Songs** from Internet
+
+For Installing
+--------------
 
 ::
 
