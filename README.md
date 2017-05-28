@@ -2,6 +2,10 @@
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ankitmathur3193/song-cli/blob/master/LICENSE)
 # SONG DOWNLOADER #
 A **command line** interface for **downloading Bollywood and Punjabi Songs** from Internet
+
+## Features ##
+* song query Google for finding link associated to https://mr-jatt.com/
+* It then parses Mr-jatt.com for finding download link of the mp3 file and downloads it.
 ## For Installing ##
 ```
 pip install song
