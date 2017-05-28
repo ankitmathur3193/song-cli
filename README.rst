@@ -3,7 +3,15 @@
 SONG DOWNLOADER
 ===============
 
-A **command line** interface for **downloading Bollywood and Punjabi Songs** from Internet
+A **command line** interface for **downloading Songs/mp3** from Internet
+
+Just type the **name of the song** and it will download for you
+
+Features
+--------
+- song can download music from https://www.youtube.com/ and https://mr-jatt.com/
+- song query Google for finding link associated to https://mr-jatt.com/
+- It then parses Mr-jatt.com for finding download link of the mp3 file and downloads it.
 
 For Installing
 --------------
@@ -30,13 +38,37 @@ Usage:
 ------
 
 ::
-
+    
+    song -y [ song_name ]
     song -d [ song_name | artist_name | movie_name ]
+    song --version
+    
+Optional arguments are:
+
+- -y : For downloading mp3 from **youtube**
+
+- -d : For downloading mp3 from **mr-jatt**
+
+- --version : For printing song version    
+    
+    
 
 Example:
 --------
 
--  .. rubric:: For Downloading Song (It will download the file in
+-  .. rubric:: For Downloading Song From Youtube 
+      :name: for-downloading-song-from-youtube
+   ::
+
+       song -y tum hi ho
+
+   .. figure:: https://cloud.githubusercontent.com/assets/15183662/26529632/28499f54-43e1-11e7-87a6-f4c0c3e2fd0b.png
+      :alt: youtube example
+
+     
+
+
+-  .. rubric:: For Downloading Song from Mr-jatt (It will download the file in
       current working directory)
       :name: for-downloading-song-it-will-download-the-file-in-current-working-directory
 
@@ -47,7 +79,7 @@ Example:
    .. figure:: https://cloud.githubusercontent.com/assets/15183662/26523026/cdc7d2e6-432a-11e7-941b-76fa9c465093.png
       :alt: song-cli example
 
-      song-cli example
+      
 
 -  .. rubric:: For Listing songs of a Movie
       :name: for-listing-songs-of-a-movie
@@ -57,7 +89,7 @@ Example:
    .. figure:: https://cloud.githubusercontent.com/assets/15183662/26523019/b009e7b2-432a-11e7-8241-919f95c993bf.png
       :alt: after movie name
 
-      after movie name
+     
 
 -  .. rubric:: For Listing Top songs of a Artist
       :name: for-listing-top-songs-of-a-artist
@@ -69,13 +101,13 @@ Example:
    .. figure:: https://cloud.githubusercontent.com/assets/15183662/26523023/c1a272dc-432a-11e7-85e7-1757a40da341.png
       :alt: artist\_top\_songs
 
-      artist\_top\_songs
+     
 
 TODO
 ----
 
+-  [ X ] Add support for Hollywood/English Songs
 -  [ ] Implement Unit Testing
--  [ ] Add support for Hollywood/English Songs
 -  [ ] Option for downloading all songs of a movie
 -  [ ] Option for downloading all top songs of a artist
 
