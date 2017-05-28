@@ -28,8 +28,8 @@ song -d [ song_name | artist_name | movie_name ]
 song --version
 ```
 Optional arguments are:
-* -y : For downloading mp3 from youtube
-* -d : For downloading mp3 from mr-jatt
+* -y : For downloading mp3 from **youtube**
+* -d : For downloading mp3 from **mr-jatt**
 * --version : For printing song version
 
 ## Example: ##
