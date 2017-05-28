@@ -21,11 +21,21 @@ class Download(Base):
     	'''
         factory = FactoryProducer()
     	p = factory.getFactory("search engine parser factory")
-    	p=p.getParser("google")
-    	website_url = p.Parse(name,"mr jatt")
-    	q = factory.getFactory("music website parser factory")
-    	q = q.getParser("mr jatt")
-    	download_url = q.Parse(website_url,name)
-        file_download=FileDownload()
-    	file_download.file_download_cross_platform(download_url)
+        if self.options['-y'] == True:   
+            print "Download from youtube" 
+            q = factory.getFactory("music website parser factory")
+            q = q.getParser("youtube")
+            link = q.Parse(name)
+            print link
+            file_download=FileDownload()
+            file_download.file_download_using_youtube_dl(link)
+        elif self.options['-d'] == True:
+            p=p.getParser("google")
+            website_url = p.Parse(name,"mr jatt")
+            q = factory.getFactory("music website parser factory")
+            q = q.getParser("mr jatt")
+            download_url = q.Parse(website_url,name)
+            file_download=FileDownload()
+            file_download.file_download_cross_platform(download_url)
+
 

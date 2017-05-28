@@ -99,5 +99,8 @@ class FileDownload:
 			self.file_download_using_requests(url);	
 
 
+	def file_download_using_youtube_dl(self,url):
+		#command = 'youtube-dl -cit --embed-thumbnail --no-warnings --extract-audio --audio-quality 0 --audio-format mp3 '
+		subprocess.call(['youtube-dl','-cit','--embed-thumbnail','--no-warnings','--extract-audio','--audio-quality', '0','--audio-format', 'mp3',url])
 						
 			

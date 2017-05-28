@@ -5,6 +5,7 @@ Usage:
   song -d TEXT...
   song -h | --help
   song --version
+  song -y TEXT...
  
 Options:
   -h --help                         Show this screen.
