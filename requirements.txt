@@ -1,0 +1,4 @@
+docopt
+requests
+BeautifulSoup
+tqdm
