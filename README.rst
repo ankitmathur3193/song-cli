@@ -128,6 +128,7 @@ TODO
 -  [ ] Implement Unit Testing
 -  [ X ] Option for downloading all songs of a movie
 -  [ X ] Option for downloading all top songs of a artist
+
 Disclaimer
 ----------
 
