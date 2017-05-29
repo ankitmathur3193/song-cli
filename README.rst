@@ -50,7 +50,7 @@ Optional arguments are:
 
 - -d : For downloading mp3 from **mr-jatt**
 
-- --download-all For downloading **all songs** of a **movie or top songs of a singer**
+- --download-all : For downloading **all songs** of a **movie or top songs of a singer**
 
 - --version : For printing song version    
     
