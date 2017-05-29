@@ -111,6 +111,10 @@ TODO
 -  [ ] Implement Unit Testing
 -  [ ] Option for downloading all songs of a movie
 -  [ ] Option for downloading all top songs of a artist
+Disclaimer
+----------
+
+Downloading copyrighted material may be illegal in your country. Use at your own risk.
 
 Want to Contribute
 ------------------
