@@ -24,12 +24,14 @@ pip uninstall song
 ## Usage: ##
 ```
 song -y [ song_name ]
-song -d [ song_name | artist_name | movie_name ]
+song -d [ song_name | singer_name | movie_name ]
+song -d --download-all [ singer_name | movie_name ]
 song --version
 ```
 Optional arguments are:
 * -y : For downloading mp3 from **youtube**
 * -d : For downloading mp3 from **mr-jatt**
+* --download-all : For downloading **all songs** of a **movie or top songs of a singer**
 * --version : For printing song version
 
 ## Example: ##
@@ -47,6 +49,12 @@ Optional arguments are:
     
     ![song-cli example](https://cloud.githubusercontent.com/assets/15183662/26523026/cdc7d2e6-432a-11e7-941b-76fa9c465093.png)
 
+* For Downloading **all songs** of a **movie or top songs of a singer**
+    ```
+    song -d --download-all dhoom  
+   ```
+
+    ![download_all](https://cloud.githubusercontent.com/assets/15183662/26556972/929c1c12-44bb-11e7-8fbc-48b389de7a82.png)
 
 * ### For Listing songs of a Movie 
   ```
@@ -66,8 +74,8 @@ Optional arguments are:
 ## TODO ##
 - [X] Add support for Hollywood/English Songs
 - [ ] Implement Unit Testing
-- [ ] Option for downloading all songs of a movie
-- [ ] Option for downloading all top songs of a artist
+- [X] Option for downloading all songs of a movie
+- [X] Option for downloading all top songs of a artist
 
 ## Disclaimer ##
 
