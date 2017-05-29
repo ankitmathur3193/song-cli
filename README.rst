@@ -83,15 +83,7 @@ Example:
    .. figure:: https://cloud.githubusercontent.com/assets/15183662/26523026/cdc7d2e6-432a-11e7-941b-76fa9c465093.png
       :alt: song-cli example
 
-      
 
--  .. rubric:: For Listing songs of a Movie
-      :name: for-listing-songs-of-a-movie
-
-   ``song -d dangal``
-
-   .. figure:: https://cloud.githubusercontent.com/assets/15183662/26523019/b009e7b2-432a-11e7-8241-919f95c993bf.png
-      :alt: after movie name
 
 -  .. rubric:: For Downloading **all songs** of a **movie or top songs of a singer**
       :name: For Downloading **all songs** of a **movie or top songs of a singer**
@@ -105,6 +97,17 @@ Example:
 
      
      
+     
+
+-  .. rubric:: For Listing songs of a Movie
+      :name: for-listing-songs-of-a-movie
+
+   ``song -d dangal``
+
+   .. figure:: https://cloud.githubusercontent.com/assets/15183662/26523019/b009e7b2-432a-11e7-8241-919f95c993bf.png
+      :alt: after movie name
+
+
 
 -  .. rubric:: For Listing Top songs of a Artist
       :name: for-listing-top-songs-of-a-artist
