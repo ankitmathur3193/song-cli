@@ -40,7 +40,8 @@ Usage:
 ::
     
     song -y [ song_name ]
-    song -d [ song_name | artist_name | movie_name ]
+    song -d [ song_name | singer_name | movie_name ]
+    song -d --download-all [ singer_name | movie_name ]
     song --version
     
 Optional arguments are:
@@ -48,6 +49,8 @@ Optional arguments are:
 - -y : For downloading mp3 from **youtube**
 
 - -d : For downloading mp3 from **mr-jatt**
+
+- --download-all For downloading **all songs** of a **movie or top songs of a singer**
 
 - --version : For printing song version    
     
@@ -80,7 +83,21 @@ Example:
    .. figure:: https://cloud.githubusercontent.com/assets/15183662/26523026/cdc7d2e6-432a-11e7-941b-76fa9c465093.png
       :alt: song-cli example
 
-      
+
+
+-  .. rubric:: For Downloading **all songs** of a **movie or top songs of a singer**
+      :name: For Downloading **all songs** of a **movie or top songs of a singer**
+
+   ::
+
+       song -d --download-all dhoom     
+
+   .. figure:: https://cloud.githubusercontent.com/assets/15183662/26556972/929c1c12-44bb-11e7-8fbc-48b389de7a82.png
+      :alt: download all songs
+
+     
+     
+     
 
 -  .. rubric:: For Listing songs of a Movie
       :name: for-listing-songs-of-a-movie
@@ -90,7 +107,7 @@ Example:
    .. figure:: https://cloud.githubusercontent.com/assets/15183662/26523019/b009e7b2-432a-11e7-8241-919f95c993bf.png
       :alt: after movie name
 
-     
+
 
 -  .. rubric:: For Listing Top songs of a Artist
       :name: for-listing-top-songs-of-a-artist
@@ -109,8 +126,8 @@ TODO
 
 -  [ X ] Add support for Hollywood/English Songs
 -  [ ] Implement Unit Testing
--  [ ] Option for downloading all songs of a movie
--  [ ] Option for downloading all top songs of a artist
+-  [ X ] Option for downloading all songs of a movie
+-  [ X ] Option for downloading all top songs of a artist
 Disclaimer
 ----------
 
