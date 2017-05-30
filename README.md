@@ -88,10 +88,11 @@ Downloading copyrighted material may be illegal in your country. Use at your own
 $ git clone https://github.com/ankitmathur3193/song-cli.git
 ```
   
- - Install dependencies
+ - Build from source
  
 ```
-$ pip install -r requirements.txt
+$ cd song-cli-master
+$ python setup.py develop
 ``` 
 
  
