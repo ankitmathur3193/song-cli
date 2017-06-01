@@ -6,7 +6,7 @@ Usage:
   song -h | --help
   song --version
   song -y TEXT...
-  song -t TEXTFILE...
+  song --ty SONGFILE...
 
 Options:
   -h --help                         Show this screen.
@@ -35,5 +35,3 @@ def main():
     print "working."
     p=Download(options)
     p.run()
-
-main()

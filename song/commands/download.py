@@ -16,14 +16,15 @@ class Download(Base):
             self.download_from_youtube(name)
         elif self.options['-d'] == True:
             self.download_from_mr_jatt(name,download_all_flag)
-        elif self.options['-t'] == True:
-            songfile = self.options["TEXTFILE"][0]
-            #include for loop + code here to download files from a list
+        elif self.options['--ty'] == True: #determines if the '-yt' tag is there and returns object at that value
+            songfile = self.options["SONGFILE"][0] #determines if options list has SONGFILE (name defined in cli.py in comments)
+            #and takes the 0th element in the songfile array, which gives the actual file of the song, not just a list with one element
             with open(songfile) as f:
-                content = f.readlines()
-            content = [x.strip() for x in content]
-            for ind in range(0, len(content)):
-                self.download_from_youtube(content[ind].split())
+                content = f.readlines() #content is a list with lines of the textfile which should be song titles
+            content = [x.strip() for x in content] #removes ending whitespaces and endlines
+            for song in content:
+                self.download_from_youtube(song.split()) #creates a list with each word of the song separated by spaces
+                #this is done so YoutubeParser.py can concatenate them with '+' signs to generate a URL to search youtube
 
 
     def download_from_youtube(self,name):
