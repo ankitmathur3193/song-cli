@@ -25,6 +25,13 @@ class Download(Base):
             for song in content:
                 self.download_from_youtube(song.split()) #creates a list with each word of the song separated by spaces
                 #this is done so YoutubeParser.py can concatenate them with '+' signs to generate a URL to search youtube
+        elif self.options['--td'] == True:
+            songfile = self.options["SONGFILE"][0]
+            with open(songfile) as f:
+                content = f.readlines()
+            content = [x.strip() for x in content]
+            for song in content:
+                self.download_from_mr_jatt(song.split(), download_all_flag)
 
 
     def download_from_youtube(self,name):
