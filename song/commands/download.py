@@ -4,26 +4,26 @@
 
 from json import dumps
 
-from .base import Base
-from .FactoryProducer import FactoryProducer
-from .FileDownload import FileDownload
+from base import Base
+from FactoryProducer import FactoryProducer
+from FileDownload import FileDownload
 class Download(Base):
 
     def run(self):
         name=self.options["TEXT"]
         download_all_flag = self.options["--download-all"]
         if self.options['-y'] == True:
-            if self.options["--text"] == True:
-                #include for loop + code here to download files from a list
-                with open("songs.txt") as f:
-                    content = f.readlines()
-                content = [x.strip() for x in content]
-                for x in range(content.length):
-                    self.download_from_youtube(x)
-            else:
-                self.download_from_youtube(name)
+            self.download_from_youtube(name)
         elif self.options['-d'] == True:
             self.download_from_mr_jatt(name,download_all_flag)
+        elif self.options['-t'] == True:
+            songfile = self.options["<textfile.txt>"]
+            #include for loop + code here to download files from a list
+            with open(songfile) as f:
+                content = f.readlines()
+            content = [x.strip() for x in content]
+            for x in range(0, len(content)):
+                self.download_from_youtube(x)
 
 
     def download_from_youtube(self,name):
