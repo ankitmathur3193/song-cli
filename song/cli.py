@@ -6,7 +6,7 @@ Usage:
   song -h | --help
   song --version
   song -y TEXT...
-  song -t <textfile.txt>
+  song -t TEXTFILE...
 
 Options:
   -h --help                         Show this screen.

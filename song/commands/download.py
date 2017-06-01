@@ -17,13 +17,13 @@ class Download(Base):
         elif self.options['-d'] == True:
             self.download_from_mr_jatt(name,download_all_flag)
         elif self.options['-t'] == True:
-            songfile = self.options["<textfile.txt>"]
+            songfile = self.options["TEXTFILE"][0]
             #include for loop + code here to download files from a list
             with open(songfile) as f:
                 content = f.readlines()
             content = [x.strip() for x in content]
-            for x in range(0, len(content)):
-                self.download_from_youtube(x)
+            for ind in range(0, len(content)):
+                self.download_from_youtube(content[ind].split())
 
 
     def download_from_youtube(self,name):
