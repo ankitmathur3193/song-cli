@@ -1,19 +1,27 @@
 # skele/commands/download.py
 """The hello command."""
- 
- 
+
+
 from json import dumps
- 
+
 from .base import Base
 from .FactoryProducer import FactoryProducer
 from .FileDownload import FileDownload
 class Download(Base):
- 
+
     def run(self):
         name=self.options["TEXT"]
         download_all_flag = self.options["--download-all"]
-        if self.options['-y'] == True:   
-            self.download_from_youtube(name)
+        if self.options['-y'] == True:
+            if self.options["--text"] == True:
+                #include for loop + code here to download files from a list
+                with open("songs.txt") as f:
+                    content = f.readlines()
+                content = [x.strip() for x in content]
+                for x in range(content.length):
+                    self.download_from_youtube(x)
+            else:
+                self.download_from_youtube(name)
         elif self.options['-d'] == True:
             self.download_from_mr_jatt(name,download_all_flag)
 
@@ -21,12 +29,12 @@ class Download(Base):
     def download_from_youtube(self,name):
         factory = FactoryProducer()
         p = factory.getFactory("search engine parser factory")
-        print "Download from youtube" 
+        print "Download from youtube"
         q = factory.getFactory("music website parser factory")
         q = q.getParser("youtube")
         link = q.Parse(name)
         file_download=FileDownload()
-        file_download.file_download_using_youtube_dl(link)    
+        file_download.file_download_using_youtube_dl(link)
 
 
     def download_from_mr_jatt(self,name,flag):
@@ -46,7 +54,3 @@ class Download(Base):
                 file_download.file_download_cross_platform(temp)
         else:
             file_download.file_download_cross_platform(download_url)
-                    
-
-
-
