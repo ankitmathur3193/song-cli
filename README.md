@@ -33,8 +33,8 @@ song --version
 Optional arguments are:
 * -y : For downloading mp3 from **youtube**
 * -d : For downloading mp3 from **mr-jatt**
-* -ty : For downloading all songs in specified text file from **youtube** mp3 format
-* -td : For downloading all songs in specified text file from **mr-jatt** mp3 format
+* --ty : For downloading all songs in specified text file from **youtube** mp3 format
+* --td : For downloading all songs in specified text file from **mr-jatt** mp3 format
 * --download-all : For downloading **all songs** of a **movie or top songs of a singer**
 * --version : For printing song version
 
