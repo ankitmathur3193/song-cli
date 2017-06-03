@@ -42,6 +42,8 @@ Usage:
     song -y [ song_name ]
     song -d [ song_name | singer_name | movie_name ]
     song -d --download-all [ singer_name | movie_name ]
+    song --ty [ textfile.txt ]
+    song --td [ textfile.txt ]
     song --version
     
 Optional arguments are:
@@ -51,6 +53,8 @@ Optional arguments are:
 - -d : For downloading mp3 from **mr-jatt**
 
 - --download-all : For downloading **all songs** of a **movie or top songs of a singer**
+- --ty : For downloading all songs in specified text file from **youtube** in mp3 format
+- --td : For downloading all songs in specified text file from **mr-jatt** in mp3 format
 
 - --version : For printing song version    
     
