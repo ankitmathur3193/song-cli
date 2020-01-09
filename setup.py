@@ -20,7 +20,7 @@ setup(
 	url = 'https://github.com/ankitmathur3193/song-cli',
 	keywords = ['song', 'download', 'script', 'youtube-dl','tqdm','requests','beautiful soup'],
 	packages = find_packages(exclude=['docs', 'tests*']),
-	install_requires = ['docopt==0.6.2','requests==2.16.4','BeautifulSoup==3.2.1','tqdm==4.11.2','youtube-dl==2017.05.26'],
+	install_requires = ['docopt==0.6.2','requests==2.20.0','BeautifulSoup==3.2.1','tqdm==4.11.2','youtube-dl==2017.05.26'],
 	classifiers = [
         'Intended Audience :: Developers',
         'Topic :: Utilities',
